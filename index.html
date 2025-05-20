@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H&M Zingers</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff7e6;
+      margin: 0;
+      padding: 0;
+      color: #5D3A00;
+    }
+    header {
+      background: #ff8c42;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(255, 140, 66, 0.4);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 3px #bb4e00;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    h2 {
+      border-bottom: 3px solid #ffa94d;
+      padding-bottom: 7px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      color: #bb6100;
+      font-weight: 700;
+      font-size: 1.9rem;
+      text-shadow: 0 1px 1px #f7c77d;
+    }
+    .menu-item {
+      background: #fff2cc;
+      border-radius: 15px;
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      color: #5D3A00;
+    }
+    .menu-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 6px 10px 20px rgba(255, 140, 66, 0.4);
+      background: #ffe8a1;
+    }
+    .menu-item h3 {
+      color: #bb6100;
+      font-size: 1.6rem;
+      margin: 0 0 8px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      text-shadow: 0 1px 1px #f7c77d;
+    }
+    .menu-item p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin: 0;
+      color: #5D3A00;
+    }
+    .price {
+      float: right;
+      color: #d35400;
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 2px #a24000;
+    }
+    .menu-item img {
+      width: 100%;
+      max-width: 320px;
+      border: 5px solid #ffd580;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 2px 2px 8px rgba(255, 193, 79, 0.7);
+      transition: box-shadow 0.3s ease;
+    }
+    .menu-item img:hover {
+      box-shadow: 4px 6px 20px rgba(255, 140, 66, 0.9);
+    }
+    .combo {
+      background: #ffe0b2;
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 40px;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #bb6100;
+      box-shadow: 3px 3px 12px rgba(255, 140, 66, 0.35);
+      text-align: center;
+      cursor: default;
+      user-select: none;
+      font-style: italic;
+    }
+    .combo em {
+      display: block;
+      margin-top: 12px;
+      color: #8c4b00;
+      font-size: 1rem;
+    }
+    .whats-new {
+      background: #d1f7c4;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 3px 3px 15px rgba(69, 179, 83, 0.5);
+      color: #3a6d19;
+      margin: 60px auto 50px;
+      max-width: 900px;
+      font-weight: 600;
+    }
+    .whats-new h2 {
+      color: #2d5312;
+      margin-top: 0;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 1px 1px #a5d18e;
+    }
+    .whats-new ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .whats-new ul li {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      position: relative;
+      padding-left: 30px;
+      transition: color 0.3s ease;
+      cursor: default;
+    }
+    .whats-new ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.3rem;
+      color: #2d5312;
+      text-shadow: 0 1px 1px #a5d18e;
+    }
+    .whats-new ul li:hover {
+      color: #1b3a0a;
+    }
+    footer {
+      background: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+      color: #888;
+      box-shadow: inset 0 1px 5px #ccc;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .menu-item {
+        padding: 15px 20px;
+      }
+      .menu-item h3 {
+        font-size: 1.3rem;
+      }
+      .menu-item p {
+        font-size: 1rem;
+      }
+      .menu-item img {
+        max-width: 100%;
+      }
+      .combo {
+        font-size: 1.1rem;
+      }
+      .whats-new h2 {
+        font-size: 1.6rem;
+      }
+      .whats-new ul li {
+        font-size: 1rem;
+        padding-left: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍗 Welcome to H&amp;M Zingers 🍟</h1>
+    <p>Your favorite classroom restaurant is BACK with flavor and fire! 🔥</p>
+  </header>
+
+  <section>
+    <h2>📋 Menu</h2>
+
+    <div class="menu-item">
+      <h3>Zinger Parata <span class="price">5 AED</span></h3>
+      <p>A simple but yummy parata filled with chicken strips.<br>Add chips for just +1 AED!</p>
+      <img src="https://via.placeholder.com/320x200?text=Zinger+Parata" alt="Zinger Parata" />
+    </div>
+
+    <div class="menu-item">
+      <h3>Chips (Any Kind) <span class="price">1 AED</span></h3>
+      <p>Oman chips, Pofak, and more...<br>Cheetos and Doritos are banned 😤</p>
+      <img src="https://via.placeholder.com/320x200?text=Chips" alt="Chips" />
+    </div>
+
+    <div class="menu-item">
+      <h3>Strawberry Jelly <span class="price">2 AED</span></h3>
+      <p>Served in a reasonable cup at a reasonable price 🍓</p>
+      <img src="https://via.placeholder.com/320x200?text=Jelly" alt="Strawberry Jelly" />
+    </div>
+
+    <div class="menu-item">
+      <h3>Zinger Strips (3 pieces) <span class="price">7 AED</span></h3>
+      <p>Crispy, juicy, and bursting with flavor – NEW item alert! 🔥</p>
+      <img src="https://via.placeholder.com/320x200?text=Zinger+Strips" alt="Zinger Strips" />
+    </div>
+
+    <div class="combo">
+      <h3>This Week’s Combo <span class="price">10 AED</span></h3>
+      <p>Zinger + Chips + Soft Drink of your choice</p>
+      <em>“A simple but great meal that will brighten up days.”</em>
+    </div>
+  </section>
+
+  <section class="whats-new">
+    <h2>🆕 What's New at H&amp;M Zingers</h2>
+    <ul>
+      <li>The limited-time meal will be removed in a few weeks</li>
+      <li>🍗 <strong>NEW:</strong> Zinger strips now available – 7 AED for 3 pieces</li>
+      <li>We have officially reopened! Come say hi 👋</li>
+      <li>Special promotions available — check back often for deals!</li>
+      <li>Now using <strong>thermal bags</strong> to keep your food warm and fresh 🔥</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 H&amp;M Zingers. All rights reserved.
+  </footer>
+
+</body>
+</html>
